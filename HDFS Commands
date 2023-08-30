@@ -2,3 +2,4 @@ export HADOOP_CLIENT_OPTS="$HADOOP_CLIENT_OPTS -Xmx64g"
 hdfs dfs -df -h
 hdfs dfs -du -s /user/hive/warehouse/* | sort -k1 -nr | head 10
 
+hdfs dfs -setrep -R -w 3 /user/hive/warehouse/sampledb.db/
